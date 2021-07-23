@@ -1,11 +1,35 @@
 import "./App.css";
+import Search from "./components/Search";
+import Line from "./components/Line";
+import Footer from "./components/Footer";
+import { useState } from "react";
 
-function App() {
+import data from "./assets/data.json";
+
+const App = () => {
+  const [search, setSearch] = useState("");
+
+  const regex = new RegExp(search);
+
   return (
     <div>
-      Hello from <a href="https://www.lereacteur.io">Le Reacteur !</a>
+      <Search search={search} setSearch={setSearch} />
+
+      {data
+        .filter((elem) => {
+          return regex.test(elem.keywords);
+        })
+        .map((el, idx) => {
+          return (
+            <div>
+              <Line key={el.title} title={el.title} symbol={el.symbol} />
+            </div>
+          );
+        })}
+
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
