@@ -10,7 +10,7 @@ const App = () => {
   const [search, setSearch] = useState("");
 
   const regex = new RegExp(search, "i");
-
+  // need refactor, filter parse the whole array, not good
   return (
     <div>
       <Search search={search} setSearch={setSearch} />
