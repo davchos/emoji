@@ -25,7 +25,8 @@ const App = () => {
                 <Line key={el.title} title={el.title} symbol={el.symbol} />
               </div>
             );
-          })}
+          })
+          .slice(0, 20)}
       </div>
       <Footer />
     </div>
