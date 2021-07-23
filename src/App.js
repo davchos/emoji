@@ -9,24 +9,24 @@ import data from "./assets/data.json";
 const App = () => {
   const [search, setSearch] = useState("");
 
-  const regex = new RegExp(search);
+  const regex = new RegExp(search, "i");
 
   return (
     <div>
       <Search search={search} setSearch={setSearch} />
-
-      {data
-        .filter((elem) => {
-          return regex.test(elem.keywords);
-        })
-        .map((el, idx) => {
-          return (
-            <div>
-              <Line key={el.title} title={el.title} symbol={el.symbol} />
-            </div>
-          );
-        })}
-
+      <div className="lines">
+        {data
+          .filter((elem) => {
+            return regex.test(elem.keywords);
+          })
+          .map((el, idx) => {
+            return (
+              <div>
+                <Line key={el.title} title={el.title} symbol={el.symbol} />
+              </div>
+            );
+          })}
+      </div>
       <Footer />
     </div>
   );

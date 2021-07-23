@@ -1,0 +1,12 @@
+.main-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* margin: 10px, 0; */
+  /* background: gray; */
+}
+
+.line {
+  margin: 10px, 0;
+  /* background: gray; */
+}

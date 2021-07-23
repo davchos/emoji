@@ -7,17 +7,19 @@ const Search = (props) => {
     setSearch(value);
   };
   return (
-    <div>
-      <h1>CSS is coming soon ......</h1>
-      <form>
-        <input
-          placeholder="grim"
-          type="search"
-          name="search"
-          value={search}
-          onChange={handlePatternChange}
-        />
-      </form>
+    <div className="search-container">
+      <div className="search">
+        <h1>CSS is coming soon ......</h1>
+        <form>
+          <input
+            placeholder="grim"
+            type="search"
+            name="search"
+            value={search}
+            onChange={handlePatternChange}
+          />
+        </form>
+      </div>
     </div>
   );
 };

@@ -1,1 +1,22 @@
 /* Other rules */
+
+.lines {
+  padding: 0 calc(100% / 10);
+  /* width: 80%; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+.lines.main-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* margin: 10px, 0; */
+  /* background: gray; */
+}
+
+.lines > div div {
+  /* margin: 10px, 0; */
+  /* background: gray; */
+}
